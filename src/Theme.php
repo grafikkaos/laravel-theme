@@ -704,8 +704,9 @@ class Theme implements ThemeContract
     /**
      * Hook a partial before rendering.
      *
-     * @param  mixed   $view
+     * @param  mixed $view
      * @param  closure $callback
+     * @param null $layout
      * @return void
      */
     public function partialComposer($view, $callback, $layout = null)
@@ -729,6 +730,34 @@ class Theme implements ThemeContract
         }, $view);
 
         $this->view->composer($view, $callback);
+    }
+
+    /**
+     * @param $view
+     * @param $callback
+     * @param null $layout
+     */
+    public function partialCreator($view, $callback, $layout = null)
+    {
+        $partialDir = $this->getConfig('containerDir.partial');
+
+        if (! is_array($view)) {
+            $view = array($view);
+        }
+
+        // Partial path with namespace.
+        $path = $this->getThemeNamespace($partialDir);
+
+        // This code support partialWithLayout.
+        if (null !== $layout) {
+            $path = $path.'.'.$layout;
+        }
+
+        $view = array_map(function ($v) use ($path) {
+            return $path.'.'.$v;
+        }, $view);
+
+        $this->view->creator($view, $callback);
     }
 
     /**
