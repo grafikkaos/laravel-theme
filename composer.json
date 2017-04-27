@@ -1,26 +1,27 @@
 {
-    "name": "teepluss/theme",
+    "name": "grafikkaos/lara-themer",
     "description": "Theme will help you organize your themes inside Laravel projects easily and maintain its related assets, layouts and partials for the theme in single directory.",
     "keywords": ["laravel", "theme", "layout", "asset", "widget", "twig"],
-    "homepage": "https://github.com/teepluss/laravel-theme",
+    "homepage": "https://github.com/grafikkaos/laravel-theme",
     "type": "library",
     "license": "MIT",
     "authors": [
         {
-            "name": "Teepluss",
-            "email": "admin@laravel.in.th"
+            "name": "grafikkaos",
+            "email": "emmanuel.okorie@grafikkaos.co.uk"
         }
     ],
     "require": {
+        "roave/security-advisories": "dev-master",
         "php": ">=5.4.0",
-        "twig/twig": "1.x"
+        "twig/twig": "2.x-dev"
     },
     "require-dev": {
-        "illuminate/support": ">=5.0.1"
+        "illuminate/support": "^5.1"
     },
     "autoload": {
         "psr-4": {
-            "Teepluss\\Theme\\": "src/"
+            "Grafikkaos\\LaraThemer\\": "src/"
         },
         "classmap": [
             "src/Exceptions.php"
