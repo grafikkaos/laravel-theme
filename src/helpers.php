@@ -7,7 +7,7 @@ if ( ! function_exists('theme'))
      *
      * @param  string  $themeName
      * @param  string  $layoutName
-     * @return \Teepluss\Theme\Theme
+     * @return \Grafikkaos\LaraThemer\Theme
      */
     function theme($themeName = null, $layoutName = null)
     {

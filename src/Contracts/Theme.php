@@ -1,4 +1,4 @@
-<?php namespace Teepluss\Theme\Contracts;
+<?php namespace Grafikkaos\LaraThemer\Contracts;
 
 interface Theme {
 

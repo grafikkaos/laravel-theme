@@ -1,4 +1,4 @@
-<?php namespace Teepluss\Theme;
+<?php namespace Grafikkaos\LaraThemer;
 
 use Closure;
 use ReflectionClass;
@@ -7,10 +7,10 @@ use Illuminate\View\Factory;
 use Illuminate\Config\Repository;
 use Illuminate\Events\Dispatcher;
 use Illuminate\Filesystem\Filesystem;
-use Teepluss\Theme\Compilers\TwigCompiler;
+use Grafikkaos\LaraThemer\Compilers\TwigCompiler;
 use Illuminate\View\Compilers\BladeCompiler;
 use Symfony\Component\HttpFoundation\Cookie;
-use Teepluss\Theme\Contracts\Theme as ThemeContract;
+use Grafikkaos\LaraThemer\Contracts\Theme as ThemeContract;
 
 class Theme implements ThemeContract 
 {
@@ -130,11 +130,11 @@ class Theme implements ThemeContract
      * @param  \Illuminate\Config\Repository $config
      * @param  \Illuminate\Events\Dispatcher $events
      * @param  \Illuminate\View\Factory $view |
-     * @param  \Teepluss\Theme\asset $asset
+     * @param  \Grafikkaos\LaraThemer\asset $asset
      * @param  \Illuminate\Filesystem\Filesystem $files
-     * @param  \Teepluss\Breadcrumb|\Teepluss\Theme\Breadcrumb $breadcrumb
+     * @param  \Teepluss\Breadcrumb|\Grafikkaos\LaraThemer\Breadcrumb $breadcrumb
      *
-     * @return \Teepluss\Theme\Theme
+     * @return \Grafikkaos\LaraThemer\Theme
      */
     public function __construct(Repository $config,
                                 Dispatcher $events,
@@ -668,7 +668,7 @@ class Theme implements ThemeContract
      * @param  string $className
      * @param  array $attributes
      * @throws UnknownWidgetClassException
-     * @return Teepluss\Theme\Widget
+     * @return Grafikkaos\LaraThemer\Widget
      */
     public function widget($className, $attributes = array())
     {
@@ -884,7 +884,7 @@ class Theme implements ThemeContract
     /**
      * Return asset instance.
      *
-     * @return \Teepluss\Theme\Asset
+     * @return \Grafikkaos\LaraThemer\Asset
      */
     public function asset()
     {
@@ -894,7 +894,7 @@ class Theme implements ThemeContract
     /**
      * Return breadcrumb instance.
      *
-     * @return \Teepluss\Theme\Breadcrumb
+     * @return \Grafikkaos\LaraThemer\Breadcrumb
      */
     public function breadcrumb()
     {

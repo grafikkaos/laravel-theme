@@ -1,4 +1,4 @@
-<?php namespace Teepluss\Theme;
+<?php namespace Grafikkaos\LaraThemer;
 
 class UnknownThemeException extends \UnexpectedValueException {}
 class UnknownViewFileException extends \UnexpectedValueException {}

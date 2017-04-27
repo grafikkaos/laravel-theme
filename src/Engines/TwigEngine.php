@@ -1,7 +1,7 @@
-<?php namespace Teepluss\Theme\Engines;
+<?php namespace Grafikkaos\LaraThemer\Engines;
 
 use Illuminate\Foundation\Application;
-use Teepluss\Theme\Compilers\TwigCompiler;
+use Grafikkaos\LaraThemer\Compilers\TwigCompiler;
 use Illuminate\View\Engines\EngineInterface;
 
 class TwigEngine implements EngineInterface {
@@ -17,7 +17,7 @@ class TwigEngine implements EngineInterface {
      * Create a new view engine instance.
      *
      * @param \Illuminate\Foundation\Application $app
-     * @return \Teepluss\Theme\Engines\TwigEngine
+     * @return \Grafikkaos\LaraThemer\Engines\TwigEngine
      */
     public function __construct(Application $app)
     {

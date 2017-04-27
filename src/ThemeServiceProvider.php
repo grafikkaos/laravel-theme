@@ -1,4 +1,4 @@
-<?php namespace Teepluss\Theme;
+<?php namespace Grafikkaos\LaraThemer;
 
 use Illuminate\Support\ServiceProvider;
 
